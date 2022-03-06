@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textSize="@dimen/defaultTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="64dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_text"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964"
+        app:srcCompat="@drawable/ic_monka" />
+
+    <Button
+        android:id="@+id/btn_getRandomImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/get_random_image"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+    <EditText
+        android:id="@+id/ed_keyWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints="emailAddress"
+        android:ems="10"
+        android:hint="@string/app_name"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_getRandomImage"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="@+id/btn_getRandomImage"
+        app:layout_constraintTop_toBottomOf="@+id/btn_getRandomImage" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/cb_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RadioGroup
+        android:id="@+id/rg_keyWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/japan" />
+
+        <RadioButton
+            android:id="@+id/rb_fire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cars" />
+
+        <RadioButton
+            android:id="@+id/rb_animals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animals" />
+
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
